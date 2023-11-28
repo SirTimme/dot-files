@@ -10,17 +10,18 @@
             "style": "full"
           },
           "style": "diamond",
-          "template": "<b>{{ .Path }}</b> ",
+          "template": "\ue5ff <b>{{ .Path }}</b> ",
           "type": "path"
         },
         {
           "foreground": "#43CCEA",
           "properties": {
 	    "branch_icon": "",
-	    "fetch_upstream_icon": true	
+	    "fetch_upstream_icon": true,
+	    "fetch_status": true	
 	  },
           "style": "diamond",
-          "template": "<b>{{ .UpstreamIcon }} {{ .HEAD }}</b>",
+          "template": "{{ .UpstreamIcon }} {{ .HEAD }}{{ if .Working.Changed }} \uF044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }}{{ end }}{{ if .Staging.Changed }} \uF046 {{ .Staging.String }}{{ end }}",
           "type": "git"
         }
       ],
