@@ -16,10 +16,10 @@
         {
           "foreground": "#43CCEA",
           "properties": {
-	    "branch_icon": "",
-	    "fetch_upstream_icon": true,
-	    "fetch_status": true	
-	  },
+            "branch_icon": "",
+            "fetch_upstream_icon": true,
+            "fetch_status": true
+          },
           "style": "diamond",
           "template": "{{ .UpstreamIcon }} {{ .HEAD }}{{ if .Working.Changed }} \uF044  {{ .Working.String }}{{ end }}{{ if .Staging.Changed }} \uF046  {{ .Staging.String }}{{ end }}",
           "type": "git"
