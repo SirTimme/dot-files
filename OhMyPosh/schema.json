@@ -2,45 +2,50 @@
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "blocks": [
     {
+      "type": "prompt",
       "alignment": "left",
       "segments": [
         {
-          "foreground": "#F1FA8C",
           "properties": {
+            "cache_duration": "none",
             "style": "full"
           },
-          "style": "diamond",
           "template": "\ue5ff <b>{{ .Path }}</b> ",
-          "type": "path"
+          "foreground": "#F1FA8C",
+          "type": "path",
+          "style": "diamond"
         },
         {
-          "foreground": "#43CCEA",
           "properties": {
             "branch_icon": "",
-            "fetch_upstream_icon": true,
-            "fetch_status": true
+            "cache_duration": "none",
+            "fetch_status": true,
+            "fetch_upstream_icon": true
           },
-          "style": "diamond",
-          "template": "{{ .UpstreamIcon }} {{ .HEAD }}{{ if .Working.Changed }} \uF044  {{ .Working.String }}{{ end }}{{ if .Staging.Changed }} \uF046  {{ .Staging.String }}{{ end }}",
-          "type": "git"
+          "template": "{{ .UpstreamIcon }} {{ .HEAD }}{{ if .Working.Changed }} \uf044  {{ .Working.String }}{{ end }}{{ if .Staging.Changed }} \uf046  {{ .Staging.String }}{{ end }}",
+          "foreground": "#43CCEA",
+          "type": "git",
+          "style": "diamond"
         }
-      ],
-      "type": "prompt"
+      ]
     },
     {
+      "type": "prompt",
       "alignment": "left",
-      "newline": true,
       "segments": [
         {
-          "foreground": "#FFFFFF",
-          "style": "plain",
+          "properties": {
+            "cache_duration": "none"
+          },
           "template": ">",
-          "type": "text"
+          "foreground": "#FFFFFF",
+          "type": "text",
+          "style": "plain"
         }
       ],
-      "type": "prompt"
+      "newline": true
     }
   ],
-  "final_space": true,
-  "version": 2
+  "version": 3,
+  "final_space": true
 }
