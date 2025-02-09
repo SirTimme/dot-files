@@ -10,7 +10,7 @@
             "cache_duration": "none",
             "style": "full"
           },
-          "template": "\ue5ff <b>{{ .Path }}</b> ",
+          "template": "\uf07b <b>{{ .Path }}</b>",
           "foreground": "#F1FA8C",
           "type": "path",
           "style": "diamond"
@@ -22,7 +22,7 @@
             "fetch_status": true,
             "fetch_upstream_icon": true
           },
-          "template": "{{ .UpstreamIcon }} {{ .HEAD }}{{ if .Working.Changed }} \uf044  {{ .Working.String }}{{ end }}{{ if .Staging.Changed }} \uf046  {{ .Staging.String }}{{ end }}",
+          "template": " \uf418 {{ .HEAD }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}",
           "foreground": "#43CCEA",
           "type": "git",
           "style": "diamond"
